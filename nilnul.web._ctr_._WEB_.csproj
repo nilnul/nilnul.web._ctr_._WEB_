@@ -1,0 +1,2821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{305A02E5-3A2D-4B51-BE86-71EE3F64523A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.web._ctr_._WEB_</RootNamespace>
+    <AssemblyName>nilnul.web._ctr_._WEB_</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AE.Net.Mail, Version=1.7.7816.38666, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\AE.Net.Mail.1.7.7816.38666\lib\net48\AE.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.collection_._discrete_._LIB_.1.1.220728.140313\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._integer_._LIB_.1.1.220905.105721\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._quotient_._LIB_.1.1.220926.131208\lib\net481\nilnul.num._quotient_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._real_._LIB_.2.1.220818.53104\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.set._discrete_._LIB_, Version=1.0.7713.29418, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.set._discrete_._LIB_.1.0.7713.29418\lib\net48\nilnul.set._discrete_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.web._css_.WEB._CTR_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.web._css_.WEB._CTR_.1.1.220729.100927\lib\net48\nilnul.web._css_.WEB._CTR_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.web._js_.WEB._CTR_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.web._js_.WEB._CTR_.1.1.220729.100635\lib\net48\nilnul.web._js_.WEB._CTR_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._acc_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._acc_._LIB_.2.1.220731.182834\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._acc_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._acc_._LINQ_.1.1.220731.182834\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._app_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._app_._LIB_.1.1.220729.93739\lib\net48\nilnul._app_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._bit_._LIB_.1.1.220822.32314\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._character_._LIB_, Version=2.1.8343.38579, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._character_._LIB_.2.1.221104.132532\lib\net481\nilnul._character_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._comm_._LIB_, Version=1.0.7827.34092, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._comm_._LIB_.1.0.7827.34092\lib\net48\nilnul._comm_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.1.221030.133307\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._human_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._human_._LIB_.1.1.220725.151533\lib\net48\nilnul._human_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._human_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._human_._LINQ_.1.1.220725.150847\lib\net48\nilnul._human_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._lang_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._lang_._LIB_.1.1.220905.132316\lib\net481\nilnul._lang_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._ling_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._ling_._LIB_.1.1.220728.141114\lib\net48\nilnul._ling_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._linq_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._linq_._LIB_.1.1.220906.140610\lib\net481\nilnul._linq_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._num_._LIB_.1.1.220826.15831\lib\net481\nilnul._num_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._num_._LINQ_.1.1.220825.155237\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.2.221103.151505\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._rel_._LIB_.1.2.220817.152548\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._set_._LIB_.1.1.220905.140119\lib\net481\nilnul._set_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._time_._LIB_.1.1.221006.142535\lib\net481\nilnul._time_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._txt_._LIB_.1.1.220908.84230\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._web_._CTR_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._web_._CTR_.1.1.220906.153228\lib\net481\nilnul._web_._CTR_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._web_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._web_._LIB_.1.1.221029.95602\lib\net481\nilnul._web_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._win_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._win_._LIB_.1.1.221029.121907\lib\net481\nilnul._win_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._xml_._LIB_.1.1.220731.165341\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Configuration.ConfigurationManager.6.0.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.Cors.5.2.9\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Cors.5.2.9\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\_nilnul_._LIB_.1.1.220819.143251\lib\net481\_nilnul_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\_nilnul_._LINQ_.1.1.220819.143032\lib\net481\_nilnul_._LINQ_.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Abort1.ascx" />
+    <Content Include="Abort_jsLoad_useCancel.ascx" />
+    <Content Include="Abort_jsLoad.ascx" />
+    <Content Include="Ajax1.ascx" />
+    <Content Include="Ajax.ascx" />
+    <Content Include="ajax\Cors1.ascx" />
+    <Content Include="ajax\cors\FailMsged1.ascx" />
+    <Content Include="ajax\cors\failMsged\Done.ascx" />
+    <Content Include="ajax\cors\failMsged\WithBtn.ascx" />
+    <Content Include="ajax\cors\failMsged\_done\Js.ascx" />
+    <Content Include="ajax\cors\failMsged\_done\JsInclusive.ascx" />
+    <Content Include="ajax\cors\failMsged\_withBtn\Js.ascx" />
+    <Content Include="ajax\cors\failMsged\_withBtn\JsInclusive.ascx" />
+    <Content Include="ajax\cors\MultiPart.ascx" />
+    <Content Include="ajax\cors\multiPart\FailMsged.ascx" />
+    <Content Include="ajax\_failMsged\Js1.ascx" />
+    <Content Include="ajax\JsonBack.ascx" />
+    <Content Include="ajax\MultiPart.ascx" />
+    <Content Include="ajax\Cors.ascx" />
+    <Content Include="ajax\cors\FailMsged.ascx" />
+    <Content Include="ajax\cors\failMsged\ErrMsged.ascx" />
+    <Content Include="ajax\cors\failMsged\errMsged\Fill.ascx" />
+    <Content Include="ajax\cors\failMsged\errMsged\_fill\Js.ascx" />
+    <Content Include="ajax\cors\failMsged\Fill.ascx" />
+    <Content Include="ajax\cors\failMsged\_errMsged\Js.ascx" />
+    <Content Include="ajax\cors\failMsged\_errMsged\JsInclusive.ascx" />
+    <Content Include="ajax\cors\failMsged\_fill\Js.ascx" />
+    <Content Include="ajax\cors\_failMsged\Js.ascx" />
+    <Content Include="ajax\cors\_failMsged\JsInclusive.ascx" />
+    <Content Include="ajax\FailMsged.ascx" />
+    <Content Include="ajax\failMsged\ErrMsged.ascx" />
+    <Content Include="ajax\failMsged\_errMsged\Js.ascx" />
+    <Content Include="ajax\failMsged\_errMsged\JsSinceFail.ascx" />
+    <Content Include="ajax\failMsged\_errMsged\JsInclusive.ascx" />
+    <Content Include="ajax\multiPart\Cors.ascx" />
+    <Content Include="ajax\_multiPart\Js.ascx" />
+    <Content Include="ajax\_jsonBack\JsInclusive.ascx" />
+    <Content Include="ajax\_jsonBack\Js.ascx" />
+    <Content Include="ajax\_multiPart\JsInclusive.ascx" />
+    <Content Include="ajax\_cors\Js.ascx" />
+    <Content Include="ajax\_cors\JsInclusive.ascx" />
+    <Content Include="ajax\_failMsged\Js.ascx" />
+    <Content Include="ajax\_failMsged\JsInclusive.ascx" />
+    <Content Include="ajax_\Cors.ascx" />
+    <Content Include="ajax_\AlwaysAlerted.ascx" />
+    <Content Include="ajax_\cors\ErrAlerted.ascx" />
+    <Content Include="ajax_\cors\_errAlerted\Js.ascx" />
+    <Content Include="ajax_\cors\_errAlerted\JsInclusive.ascx" />
+    <Content Include="ajax_\cors_\simple\ErrAlerted.ascx" />
+    <Content Include="ajax_\cors_\Simple.ascx" />
+    <Content Include="ajax_\cors_\_simple\Js.ascx" />
+    <Content Include="ajax_\cors_\_simple\JsInclusive.ascx" />
+    <Content Include="ajax_\ErrAlerted.ascx" />
+    <Content Include="ajax_\Btn2Go.ascx" />
+    <Content Include="ajax_\ErrDoneMsg_TrigPassRole_OtherExnMsg.ascx" />
+    <Content Include="ajax_\WithBtn.ascx" />
+    <Content Include="ajax_\WithSubmit.ascx" />
+    <Content Include="ajax_\ErrDoneAlertedTrigPassRoleExnDone.ascx" />
+    <Content Include="ajax_\ErrAlerted2.ascx" />
+    <Content Include="ajax_\ErrAlerted1.ascx" />
+    <Content Include="ajax_\NoAlert.ascx" />
+    <Content Include="ajax_\_btn2Go\Js.ascx" />
+    <Content Include="ajax_\_btn2Go\JsAll.ascx" />
+    <Content Include="ajax_\_cors\Js.ascx" />
+    <Content Include="ajax_\_cors\JsInclusive.ascx" />
+    <Content Include="ajax_\_errAlerted\Js4ErrAlerted2.ascx" />
+    <Content Include="ajax_\_errAlerted\Js4ErrAlerted1.ascx" />
+    <Content Include="ajax_\_errAlerted\JsAll.ascx" />
+    <Content Include="cover_\ClickOff.ascx" />
+    <Content Include="cover_\_clickOff\Js.ascx" />
+    <Content Include="cover_\_clickOff\JsInclusive.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="dialog_\jq_\Ajax.ascx" />
+    <Content Include="dialog_\jq_\ajax\Anchor.ascx" />
+    <Content Include="dialog_\jq_\ajax\_anchor\Js.ascx" />
+    <Content Include="dialog_\jq_\_ajax\Js.ascx" />
+    <Content Include="dialog_\LoadContent.ascx" />
+    <Content Include="dialog_\Jq.ascx" />
+    <Content Include="dialog_\MovablePlated.ascx" />
+    <Content Include="dialog_\_loadContent\Js.ascx" />
+    <Content Include="err\optional_\Length.ascx" />
+    <Content Include="err\optional_\Func.ascx" />
+    <Content Include="err\optional_\Regex.ascx" />
+    <Content Include="err\optional_\_length\Js.ascx" />
+    <Content Include="err\optional_\_func\Js.ascx" />
+    <Content Include="err\_optionals\JsInclusive.ascx" />
+    <Content Include="map\Address.ascx" />
+    <Content Include="map\_address\Js.ascx" />
+    <Content Include="validator_\Required.ascx" />
+    <Content Include="validator_\_required\Js.ascx" />
+    <Content Include="err\optional_\_regex\Js.ascx" />
+    <Content Include="filable\_fil\Js.ascx" />
+    <Content Include="fitable\_fit\Js.ascx" />
+    <Content Include="Frm.ascx" />
+    <Content Include="frm\Comm.ascx" />
+    <Content Include="frm\comm\DoneUncover.ascx" />
+    <Content Include="frm\comm\_doneUncover\Js.ascx" />
+    <Content Include="frm\comm\_doneUncover\JsInclusive.ascx" />
+    <Content Include="frm\comm_\AjaxDyna.ascx" />
+    <Content Include="frm\comm_\ajaxDyna\Dialog.ascx" />
+    <Content Include="frm\comm_\ajaxDyna\DoneUncover.ascx" />
+    <Content Include="frm\comm_\ajaxDyna\_dialog\Js.ascx" />
+    <Content Include="frm\comm_\ajaxDyna\_doneUncover\Js.ascx" />
+    <Content Include="frm\comm_\ajaxDyna\_doneUncover\JsInclusive.ascx" />
+    <Content Include="frm\comm_\_ajaxDyna\Js.ascx" />
+    <Content Include="frm\comm_\_ajaxDyna\JsInclusive.ascx" />
+    <Content Include="frm\_comm\Js.ascx" />
+    <Content Include="frm\_comm\JsInclusive.ascx" />
+    <Content Include="frm\_fit\Js.ascx" />
+    <Content Include="human\Birth.ascx" />
+    <Content Include="human\Gender.ascx" />
+    <Content Include="human\gender_\Required.ascx" />
+    <Content Include="human\Name.ascx" />
+    <Content Include="human\_birth\Js.ascx" />
+    <Content Include="human\_gender\Js.ascx" />
+    <Content Include="human\_names\JsInclusive.ascx" />
+    <Content Include="human\_name\Js.ascx" />
+    <Content Include="human\_name_\Family.ascx" />
+    <Content Include="human\_name_\family\Nulable.ascx" />
+    <Content Include="human\_name_\family\_nulable\Js.ascx" />
+    <Content Include="human\_name_\Given.ascx" />
+    <Content Include="human\_name_\Mid.ascx" />
+    <Content Include="human\_name_\_family\Js.ascx" />
+    <Content Include="human\_name_\_given\Js.ascx" />
+    <Content Include="human\_name_\_mid\Js.ascx" />
+    <Content Include="menu_\JqUi.ascx" />
+    <Content Include="Movable.ascx" />
+    <Content Include="Closable.ascx" />
+    <Content Include="Dialog.ascx" />
+    <Content Include="FetchUi.ascx" />
+    <Content Include="menu_\Cascade.ascx" />
+    <Content Include="menu_\_cascade\Css.ascx" />
+    <Content Include="menu_\_cascade\css\TypeCss.aspx" />
+    <Content Include="menu_\_cascade\css\typeCss\Import.ascx" />
+    <Content Include="menu_\_cascade\css\typeCss\import\Style.ascx" />
+    <Content Include="movable_\DocumentMouseMove.ascx" />
+    <Content Include="radio_\Horizon.ascx" />
+    <Content Include="radio_\horizon\_fit\Js.ascx" />
+    <Content Include="radio_\Vertical.ascx" />
+    <Content Include="radio_\_horizon\Css.ascx" />
+    <Content Include="radio_\_horizon\Js.ascx" />
+    <Content Include="radio_\_horizon\JsAll.ascx" />
+    <Content Include="radio_\_vertical\Css.ascx" />
+    <Content Include="Progress.ascx" />
+    <Content Include="script_\NameInput.ascx" />
+    <Content Include="script_\_nameInput\Js.ascx" />
+    <Content Include="State.ascx" />
+    <Content Include="Alter.ascx" />
+    <Content Include="alter_\Duo.ascx" />
+    <Content Include="alter_\_duo\Js.ascx" />
+    <Content Include="alter_\_duo\JsAll.ascx" />
+    <Content Include="Confirm1.ascx" />
+    <Content Include="Alert2.ascx" />
+    <Content Include="Alert_jsLoad.ascx" />
+    <Content Include="Cancel_submitting.ascx" />
+    <Content Include="Cancel.ascx" />
+    <Content Include="Confirm_jsLoad.ascx" />
+    <Content Include="Cover.ascx" />
+    <Content Include="date\birth\InChinese.ascx" />
+    <Content Include="Email_scriptLoad.ascx" />
+    <Content Include="Err1.ascx" />
+    <Content Include="Err_scriptLoad.ascx" />
+    <Content Include="email\InChinese.ascx" />
+    <Content Include="LabelPassErr_scriptLoad.ascx" />
+    <Content Include="LabelPass_scriptLoad.ascx" />
+    <Content Include="LabelRegexErrRequired_scriptLoad.ascx" />
+    <Content Include="LabelTxtAreaErr.ascx" />
+    <Content Include="LabelTxtErr_scriptLoad.ascx" />
+    <Content Include="LabelRegexErr_scriptLoad.ascx" />
+    <Content Include="LabelEmailErr_scriptLoad.ascx" />
+    <Content Include="menu_\Main.ascx" />
+    <Content Include="Pass2.ascx" />
+    <Content Include="Password2.ascx" />
+    <Content Include="Password1.ascx" />
+    <Content Include="PasswordRegexed1.ascx" />
+    <Content Include="PasswordRegexed3.ascx" />
+    <Content Include="PasswordRegexedErr2.ascx" />
+    <Content Include="PasswordRegexErr.ascx" />
+    <Content Include="radioNullable_\duo_\InDiv.ascx" />
+    <Content Include="radioNullable_\duo_\InRow.ascx" />
+    <Content Include="radioNullable_\duo_\_inDiv\Js.ascx" />
+    <Content Include="radioNullable_\duo_\_inDiv\JsInclusive.ascx" />
+    <Content Include="radioNullable_\duo_\_inDiv\JsAll.ascx" />
+    <Content Include="radioNullable_\duo_\_inRow\Js.ascx" />
+    <Content Include="radioNullable_\duo_\_inRow\JsAll.ascx" />
+    <Content Include="radioNullable_\Natural.ascx" />
+    <Content Include="radioNullable_\nat\Quo.ascx" />
+    <Content Include="radioNullable_\_natural\Js.ascx" />
+    <Content Include="radioNullable_\_natural\JsAll.ascx" />
+    <Content Include="radio_\Duo.ascx" />
+    <Content Include="radio_\_duo\Js.ascx" />
+    <Content Include="Regex_scriptLoad.ascx" />
+    <Content Include="RegexErr.ascx" />
+    <Content Include="PosQuotient.ascx" />
+    <Content Include="Abort.ascx" />
+    <Content Include="Alert.ascx" />
+    <Content Include="Confirm.ascx" />
+    <Content Include="EmailOptional.ascx" />
+    <Content Include="Email2.ascx" />
+    <Content Include="EmailRequired2.ascx" />
+    <Content Include="Msg.ascx" />
+    <Content Include="FullName.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="LabelEmailValidator2.ascx" />
+    <Content Include="LabelEmailRequiredValidator2.ascx" />
+    <Content Include="Num.ascx" />
+    <Content Include="NumPositive.ascx" />
+    <Content Include="Regex3.ascx" />
+    <Content Include="Regex_byBox.ascx" />
+    <Content Include="Regex2.ascx" />
+    <Content Include="state\Div.ascx" />
+    <Content Include="state\_div\Js.ascx" />
+    <Content Include="state\_div\JsInclusive.ascx" />
+    <Content Include="Tab.ascx" />
+    <Content Include="tabsFoldable_\_duo_\Panes.ascx" />
+    <Content Include="tabsFoldable_\_duo_\_panes\Js.ascx" />
+    <Content Include="tabsFoldable_\_duo_\_panes\JsAll.ascx" />
+    <Content Include="tabs_\Horizon.ascx" />
+    <Content Include="tabs_\horizon\_fit\Js.ascx" />
+    <Content Include="tabs_\Trio.ascx" />
+    <Content Include="tabs_\Duo.ascx" />
+    <Content Include="tabs_\vertical_\Flex.ascx" />
+    <Content Include="tabs_\vertical_\Navi.ascx" />
+    <Content Include="tabs_\vertical_\_flex\Js.ascx" />
+    <Content Include="tabs_\vertical_\_flex\JsInclusive.ascx" />
+    <Content Include="tabs_\vertical_\_navi\Js.ascx" />
+    <Content Include="tabs_\vertical_\_navi\JsAll.ascx" />
+    <Content Include="tabs_\_duo\Js.ascx" />
+    <Content Include="tabs_\_duo\JsAll.ascx" />
+    <Content Include="tabs_\_horizon\Js.ascx" />
+    <Content Include="tabs_\_horizon\JsInclusive.ascx" />
+    <Content Include="tabs_\_trio_\Btns.ascx" />
+    <Content Include="tabs_\_trio_\Panes.ascx" />
+    <Content Include="tabs_\_trio_\_btns\Js.ascx" />
+    <Content Include="tabs_\_trio_\_btns\JsAll.ascx" />
+    <Content Include="tabs_\_trio_\_panes\Js.ascx" />
+    <Content Include="tabs_\_trio_\_panes\JsAll.ascx" />
+    <Content Include="tabs_\_duo_\Btns.ascx" />
+    <Content Include="tabs_\_duo_\Panes.ascx" />
+    <Content Include="tabs_\_duo_\_btns\Js.ascx" />
+    <Content Include="tabs_\_duo_\_btns\JsAll.ascx" />
+    <Content Include="tabs_\_duo_\_panes\Js.ascx" />
+    <Content Include="tabs_\_duo_\_panes\JsAll.ascx" />
+    <Content Include="tabs_\_trio\Js.ascx" />
+    <Content Include="tabs_\_trio\JsAll.ascx" />
+    <Content Include="time\bound_\Day.ascx" />
+    <Content Include="time\bound_\day_\LeNow.ascx" />
+    <Content Include="time\bound_\day_\_leNow\Js.ascx" />
+    <Content Include="time\bound_\_day\Js.ascx" />
+    <Content Include="TrOverlay.ascx" />
+    <Content Include="Money.ascx" />
+    <Content Include="Txt4.ascx" />
+    <Content Include="Txt3.ascx" />
+    <Content Include="TxtArea.ascx" />
+    <Content Include="TxtArea1.ascx" />
+    <Content Include="txtArea\Probe.ascx" />
+    <Content Include="txtArea\_probe\Js.ascx" />
+    <Content Include="txt\Cached.ascx" />
+    <Content Include="txt\Err.ascx" />
+    <Content Include="txt\err\Cached.ascx" />
+    <Content Include="txt\warn_\Phone.ascx" />
+    <Content Include="txt\err\Email.ascx" />
+    <Content Include="txt\err\email\Cached.ascx" />
+    <Content Include="txt\err\email\Labeled.ascx" />
+    <Content Include="txt\err\email\labeled\Cached.ascx" />
+    <Content Include="txt\err\email\_labeled\Js.ascx" />
+    <Content Include="txt\warn_\_phone\Js.ascx" />
+    <Content Include="txt\err\_email\Js.ascx" />
+    <Content Include="txt\err_\pass\Cached.ascx" />
+    <Content Include="txt\err_\Pass.ascx" />
+    <Content Include="txt\err_\pass\Labeled.ascx" />
+    <Content Include="txt\err_\pass\labeled\Cached.ascx" />
+    <Content Include="txt\err_\pass\_labeled\Js.ascx" />
+    <Content Include="txt\_err\Js.ascx" />
+    <Content Include="Txt_scriptLoad.ascx" />
+    <Content Include="Txt2.ascx" />
+    <Content Include="Txt1.ascx" />
+    <Content Include="Txt.ascx" />
+    <Content Include="Err.ascx" />
+    <Content Include="txt_\Pass.ascx" />
+    <Content Include="urlAssignable\_urlAssign\Js.ascx" />
+    <Content Include="_ajax\Js1.ascx" />
+    <Content Include="_ajax\Js.ascx" />
+    <Content Include="_ajax\JsInclusive.ascx" />
+    <Content Include="_ajax\upload\failForked\errMsged\exnMsged\ui_\Click.ascx" />
+    <Content Include="_ajax\upload\failForked\errMsged\exnMsged\ui_\_click\Js.ascx" />
+    <Content Include="_ajax\upload\failForked\errMsged\exnMsged\ui_\_click\JsInclusive.ascx" />
+    <Content Include="Validator2.ascx" />
+    <Content Include="Validator1.ascx" />
+    <Content Include="LabelRegexValidatorForStationedPhoneNumber.ascx" />
+    <Content Include="LabelRegexValidatorForMobileNumber.ascx" />
+    <Content Include="LabelRegexValidatorForChinaIdNumber.ascx" />
+    <Content Include="LabelRegexValidatorForPhoneNumber.ascx" />
+    <Content Include="LabelRegexValidatorForNonnegNum.ascx" />
+    <Content Include="LabelDecimalValidator.ascx" />
+    <Content Include="Decimal.ascx" />
+    <Content Include="LabelEmailRequiredValidator.ascx" />
+    <Content Include="EmailRequired.ascx" />
+    <Content Include="LabelEmailValidator.ascx" />
+    <Content Include="LabelPassword2nd.ascx" />
+    <Content Include="LabelPasswordRegexed.ascx" />
+    <Content Include="LabelPasswordRegexedValidator.ascx" />
+    <Content Include="LabelRegexValidatorForEmail.ascx" />
+    <Content Include="LabelTextRegexedValidator.ascx" />
+    <Content Include="LabelRegexValidator.ascx" />
+    <Content Include="LabelText.ascx" />
+    <Content Include="PasswordRegexed.ascx" />
+    <Content Include="Email.ascx" />
+    <Content Include="Text.ascx" />
+    <Content Include="_abort\Js.ascx" />
+    <Content Include="_abort\Script.ascx" />
+    <Content Include="_ajax\Upload.ascx" />
+    <Content Include="_ajax\upload\failForked\ErrMsged.ascx" />
+    <Content Include="_ajax\upload\FailForked.ascx" />
+    <Content Include="_ajax\upload\failForked\errMsged\ExnMsged.ascx" />
+    <Content Include="_ajax\upload\failForked\errMsged\_exnMsged\Js.ascx" />
+    <Content Include="_ajax\upload\failForked\errMsged\_exnMsged\JsInclusive.ascx" />
+    <Content Include="_ajax\upload\failForked\_errMsged\Js.ascx" />
+    <Content Include="_ajax\upload\failForked\_errMsged\JsInclusive.ascx" />
+    <Content Include="_ajax\upload\_failForked\Js.ascx" />
+    <Content Include="_ajax\upload\_failForked\JsInclusive.ascx" />
+    <Content Include="_ajax\_upload\Js.ascx" />
+    <Content Include="_ajax\_upload\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\ErrAlerted.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\Btn2Go.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\DoneAlerted.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\TrigPass.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\TrigRole.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\WithBtn.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\WithSubmit.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_WithBtn\Js.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_WithBtn\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_withSubmit\Js.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_withSubmit\JsFroFailSeperated.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_withSubmit\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\OtherExnAlerted.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\_otherExnAlerted\Js.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\_otherExnAlerted\JsFroFailSeperated.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\_otherExnAlerted\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\_trigRole\Js.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\_trigRole\JsFroFailSeperated.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\_trigRole\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\_trigPass\Js.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\_trigPass\JsFroFailSeperated.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\_trigPass\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\_doneAlerted\Js.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\_doneAlerted\JsFroFailSeperated.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\_doneAlerted\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\_btn2Go\Js.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\errAlerted\_btn2Go\JsAll.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\_errAlerted\Js.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\_errAlerted\JsFroFailSeperated.ascx" />
+    <Content Include="_ajax_\state_\failSeperated\_errAlerted\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\FailSeperated.ascx" />
+    <Content Include="_ajax_\state_\ErrSeperated.ascx" />
+    <Content Include="_ajax_\State.ascx" />
+    <Content Include="_ajax_\state\abort\failHandled\_errHandled\Script.ascx" />
+    <Content Include="_ajax_\state\abort\_failHandled\Script.ascx" />
+    <Content Include="_ajax_\state\AlwaysAlerted.ascx" />
+    <Content Include="_ajax_\state_\errSeperated\ErrAlerted.ascx" />
+    <Content Include="_ajax_\state\ErrAlerted.ascx" />
+    <Content Include="_ajax_\state\errAlerted\WithButton.ascx" />
+    <Content Include="_ajax_\state\errAlerted\_withButton\Js.ascx" />
+    <Content Include="_ajax_\state\errAlerted\_withButton\js\AsSrc.aspx" />
+    <Content Include="_ajax_\state\WithButton.ascx" />
+    <Content Include="_ajax_\state\_abort\Script.ascx" />
+    <Content Include="_ajax_\state\_alwaysAlerted\Js.ascx" />
+    <Content Include="_ajax_\state\_alwaysAlerted\Script.ascx" />
+    <Content Include="_ajax_\state\_errAlerted\Js.ascx" />
+    <Content Include="_ajax_\state\_errAlerted\Script.ascx" />
+    <Content Include="_ajax_\state_\errSeperated\errAlerted\Btn2Go.ascx" />
+    <Content Include="_ajax_\state_\errSeperated\errAlerted\_btn2Go\Js.ascx" />
+    <Content Include="_ajax_\state_\errSeperated\errAlerted\_btn2Go\JsAll.ascx" />
+    <Content Include="_ajax_\state_\errSeperated\_errAlerted\JsAll.ascx" />
+    <Content Include="_ajax_\state_\errSeperated\_errAlerted\Js.ascx" />
+    <Content Include="_ajax_\state_\_failSeperated\Js.ascx" />
+    <Content Include="_ajax_\state_\_failSeperated\JsInclusive.ascx" />
+    <Content Include="_ajax_\state_\_errSeperated\Js.ascx" />
+    <Content Include="_ajax_\state_\_errSeperated\JsAll.ascx" />
+    <Content Include="_ajax_\_state\Js.ascx" />
+    <Content Include="_ajax_\_state\js\AsSrc.aspx" />
+    <Content Include="_ajax_\_state\Script.ascx" />
+    <Content Include="_alert\JsInclusive.ascx" />
+    <Content Include="_all\Css.ascx" />
+    <Content Include="_all\css\Src.aspx" />
+    <Content Include="_all\css\src\import\Style.ascx" />
+    <Content Include="_all\css\src\Link.ascx" />
+    <Content Include="_all\css\src\Import.ascx" />
+    <Content Include="_all\_js_\Maps.ascx" />
+    <Content Include="_all\_js_\Filables.ascx" />
+    <Content Include="_all\_js_\Humans.ascx" />
+    <Content Include="_all\_js_\Errs.ascx" />
+    <Content Include="_all\_js_\Times.ascx" />
+    <Content Include="_all\_js_\UrlAssignables.ascx" />
+    <Content Include="_all\_js_\Fitables.ascx" />
+    <Content Include="_all\_js_\Frms.ascx" />
+    <Content Include="_all\_js_\Tabs.ascx" />
+    <Content Include="_all\_script\Js.ascx" />
+    <Content Include="_closable\Js.ascx" />
+    <Content Include="T.ascx" />
+    <Content Include="_Default.ascx" />
+    <Content Include="_dialog\Css.ascx" />
+    <Content Include="_dialog\Js.ascx" />
+    <Content Include="_alter\Js.ascx" />
+    <Content Include="_dialog\JsInclusive.ascx" />
+    <Content Include="_dialog_\TopBar.ascx" />
+    <Content Include="_dialog_\_topBar\Js.ascx" />
+    <Content Include="_dialog_\_topBar\JsInclusive.ascx" />
+    <Content Include="_feed\Js.ascx" />
+    <Content Include="_fetchUi\Js.ascx" />
+    <Content Include="radio_\_vertical\Js.ascx" />
+    <Content Include="radio_\_vertical\JsAll.ascx" />
+    <Content Include="_frm\Js.ascx" />
+    <Content Include="_frm\JsInclusive.ascx" />
+    <Content Include="_layout_\drift_\Jq.ascx" />
+    <Content Include="_layout_\drift_\jq_\_dialog\BtnsInTheMain.ascx" />
+    <Content Include="_layout_\drift_\Js.ascx" />
+    <Content Include="_layout_\drift_\js_\NoOutOfParent.ascx" />
+    <Content Include="_layout_\drift_\_jq\Draggable.ascx" />
+    <Content Include="_master\ForTest.Master" />
+    <Content Include="_master\ForTest1.Master" />
+    <Content Include="_money\JsInclusive.ascx" />
+    <Content Include="_progress\Css.ascx" />
+    <Content Include="_progress\Js.ascx" />
+    <Content Include="_state\Js.ascx" />
+    <Content Include="_alert\Js.ascx" />
+    <Content Include="_alert\Script.ascx" />
+    <Content Include="_all\InScript.ascx" />
+    <Content Include="_all\Scripts.ascx" />
+    <Content Include="_all\script_\NoJqUi.ascx" />
+    <Content Include="_all\StyleScriptS.ascx" />
+    <Content Include="_all\styleScriptS_\NoJqUi.ascx" />
+    <Content Include="_ajax_\state\Abort.ascx" />
+    <Content Include="_ajax_\state\abort\FailHandled.ascx" />
+    <Content Include="_ajax_\state\abort\failHandled\ErrHandled.ascx" />
+    <Content Include="_confirm\Js.ascx" />
+    <Content Include="_confirm\Script.ascx" />
+    <Content Include="_err1\Js.ascx" />
+    <Content Include="_js\Err.ascx" />
+    <Content Include="_js\All.ascx" />
+    <Content Include="_js\all\TypeJs.aspx" />
+    <Content Include="_js\all\typeJs\ScriptSrc.ascx" />
+    <Content Include="_all\Js.ascx" />
+    <Content Include="_all\js\TypeJs.aspx" />
+    <Content Include="_all\js\typeJs\ScriptSrc.ascx" />
+    <Content Include="_passwordRegexed\Js.ascx" />
+    <Content Include="_passwordRegexedErr2\Js.ascx" />
+    <Content Include="_radio_\Duo.ascx" />
+    <Content Include="_radio_\_duo\Js.ascx" />
+    <Content Include="_test\Abort_jsLoad.aspx" />
+    <Content Include="_test\LabelEmailErr1.aspx" />
+    <Content Include="_test\LabelEmailRequiredValidator2.aspx" />
+    <Content Include="_test\PosQuotient.aspx" />
+    <Content Include="_test\Num.aspx" />
+    <Content Include="_test\NumPositive.aspx" />
+    <Content Include="_test\Abort.aspx" />
+    <Content Include="_test\Alert.aspx" />
+    <Content Include="_test\Alert_cache.aspx" />
+    <Content Include="_test\LabelRegexValidatorForMobileNumber.aspx" />
+    <Content Include="_test\LabelRegexValidatorForStationedPhoneNumber.aspx" />
+    <Content Include="_test\Email.aspx" />
+    <Content Include="_test\LabelDecimalValidator.aspx" />
+    <Content Include="_test\LabelEmailRequiredValidator.aspx" />
+    <Content Include="_test\LabelEmailValidator.aspx" />
+    <Content Include="_test\LabelPassword.aspx" />
+    <Content Include="_test\LabelPasswordRegexedValidator.aspx" />
+    <Content Include="_test\LabelRegexValidator.aspx" />
+    <Content Include="_test\LabelRegexValidatorForEmail.aspx" />
+    <Content Include="_test\LabelRegexValidatorForPhoneNumber.aspx" />
+    <Content Include="_test\LabeRegexValidatorForChinaIdNumber.aspx" />
+    <Content Include="_test\LableRegexValidatorForNonnegDecimal.aspx" />
+    <Content Include="_test\Password.aspx" />
+    <Content Include="_test\PasswordRegexed.aspx" />
+    <Content Include="_test\Text.aspx" />
+    <Content Include="_test\Validator.aspx" />
+    <Content Include="Regex.ascx" />
+    <Content Include="Password.ascx" />
+    <Content Include="Validator.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="_money\Js.ascx" />
+    <Content Include="_txtArea\Js.ascx" />
+    <Content Include="_txt\Js4Txt4.ascx" />
+    <Content Include="_txt\Js.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abort1.ascx.cs">
+      <DependentUpon>Abort1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Abort1.ascx.designer.cs">
+      <DependentUpon>Abort1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax1.ascx.cs">
+      <DependentUpon>Ajax1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax1.ascx.designer.cs">
+      <DependentUpon>Ajax1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax.ascx.cs">
+      <DependentUpon>Ajax.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax.ascx.designer.cs">
+      <DependentUpon>Ajax.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\Cors1.ascx.cs">
+      <DependentUpon>Cors1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\Cors1.ascx.designer.cs">
+      <DependentUpon>Cors1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\FailMsged1.ascx.cs">
+      <DependentUpon>FailMsged1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\FailMsged1.ascx.designer.cs">
+      <DependentUpon>FailMsged1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\Done.ascx.cs">
+      <DependentUpon>Done.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\Done.ascx.designer.cs">
+      <DependentUpon>Done.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\WithBtn.ascx.cs">
+      <DependentUpon>WithBtn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\WithBtn.ascx.designer.cs">
+      <DependentUpon>WithBtn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\_done\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\_done\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\_withBtn\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\_withBtn\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\MultiPart.ascx.cs">
+      <DependentUpon>MultiPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\MultiPart.ascx.designer.cs">
+      <DependentUpon>MultiPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\multiPart\FailMsged.ascx.cs">
+      <DependentUpon>FailMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\multiPart\FailMsged.ascx.designer.cs">
+      <DependentUpon>FailMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_failMsged\Js1.ascx.cs">
+      <DependentUpon>Js1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_failMsged\Js1.ascx.designer.cs">
+      <DependentUpon>Js1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\JsonBack.ascx.cs">
+      <DependentUpon>JsonBack.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\JsonBack.ascx.designer.cs">
+      <DependentUpon>JsonBack.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\MultiPart.ascx.cs">
+      <DependentUpon>MultiPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\MultiPart.ascx.designer.cs">
+      <DependentUpon>MultiPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\Cors.ascx.cs">
+      <DependentUpon>Cors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\Cors.ascx.designer.cs">
+      <DependentUpon>Cors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\FailMsged.ascx.cs">
+      <DependentUpon>FailMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\FailMsged.ascx.designer.cs">
+      <DependentUpon>FailMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\ErrMsged.ascx.cs">
+      <DependentUpon>ErrMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\ErrMsged.ascx.designer.cs">
+      <DependentUpon>ErrMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\errMsged\Fill.ascx.cs">
+      <DependentUpon>Fill.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\errMsged\Fill.ascx.designer.cs">
+      <DependentUpon>Fill.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\errMsged\_fill\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\errMsged\_fill\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\Fill.ascx.cs">
+      <DependentUpon>Fill.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\Fill.ascx.designer.cs">
+      <DependentUpon>Fill.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\_errMsged\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\_errMsged\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\_fill\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\failMsged\_fill\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\_failMsged\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\cors\_failMsged\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\FailMsged.ascx.cs">
+      <DependentUpon>FailMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\FailMsged.ascx.designer.cs">
+      <DependentUpon>FailMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\failMsged\ErrMsged.ascx.cs">
+      <DependentUpon>ErrMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\failMsged\ErrMsged.ascx.designer.cs">
+      <DependentUpon>ErrMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\failMsged\_errMsged\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\failMsged\_errMsged\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\multiPart\Cors.ascx.cs">
+      <DependentUpon>Cors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\multiPart\Cors.ascx.designer.cs">
+      <DependentUpon>Cors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_multiPart\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_multiPart\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_jsonBack\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_jsonBack\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_cors\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_cors\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_failMsged\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\_failMsged\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\Cors.ascx.cs">
+      <DependentUpon>Cors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\Cors.ascx.designer.cs">
+      <DependentUpon>Cors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\AlwaysAlerted.ascx.cs">
+      <DependentUpon>AlwaysAlerted.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax_\AlwaysAlerted.ascx.designer.cs">
+      <DependentUpon>AlwaysAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors\ErrAlerted.ascx.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors\ErrAlerted.ascx.designer.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors\_errAlerted\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors\_errAlerted\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors_\simple\ErrAlerted.ascx.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors_\simple\ErrAlerted.ascx.designer.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors_\Simple.ascx.cs">
+      <DependentUpon>Simple.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors_\Simple.ascx.designer.cs">
+      <DependentUpon>Simple.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors_\_simple\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\cors_\_simple\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\ErrAlerted.ascx.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax_\ErrAlerted.ascx.designer.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\_cors\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax_\_cors\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Alert.ascx.cs">
+      <DependentUpon>Alert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alert.ascx.designer.cs">
+      <DependentUpon>Alert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cover_\ClickOff.ascx.cs">
+      <DependentUpon>ClickOff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cover_\ClickOff.ascx.designer.cs">
+      <DependentUpon>ClickOff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cover_\_clickOff\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cover_\_clickOff\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\jq_\Ajax.ascx.cs">
+      <DependentUpon>Ajax.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\jq_\Ajax.ascx.designer.cs">
+      <DependentUpon>Ajax.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\jq_\ajax\Anchor.ascx.cs">
+      <DependentUpon>Anchor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\jq_\ajax\Anchor.ascx.designer.cs">
+      <DependentUpon>Anchor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\jq_\ajax\_anchor\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\jq_\ajax\_anchor\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\jq_\_ajax\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\jq_\_ajax\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\LoadContent.ascx.cs">
+      <DependentUpon>LoadContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\LoadContent.ascx.designer.cs">
+      <DependentUpon>LoadContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\Jq.ascx.cs">
+      <DependentUpon>Jq.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialog_\Jq.ascx.designer.cs">
+      <DependentUpon>Jq.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\MovablePlated.ascx.cs">
+      <DependentUpon>MovablePlated.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialog_\MovablePlated.ascx.designer.cs">
+      <DependentUpon>MovablePlated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\_loadContent\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_\_loadContent\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\Length.ascx.cs">
+      <DependentUpon>Length.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\Length.ascx.designer.cs">
+      <DependentUpon>Length.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\Func.ascx.cs">
+      <DependentUpon>Func.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\Func.ascx.designer.cs">
+      <DependentUpon>Func.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\Regex.ascx.cs">
+      <DependentUpon>Regex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\Regex.ascx.designer.cs">
+      <DependentUpon>Regex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\_length\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\_length\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\_func\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\_func\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="map\Address.ascx.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="map\Address.ascx.designer.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="map\_address\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="map\_address\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="validator_\Required.ascx.cs">
+      <DependentUpon>Required.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="validator_\Required.ascx.designer.cs">
+      <DependentUpon>Required.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="validator_\_required\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="validator_\_required\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\_regex\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="err\optional_\_regex\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="filable\_fil\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="filable\_fil\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="fitable\_fit\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="fitable\_fit\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Frm.ascx.cs">
+      <DependentUpon>Frm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Frm.ascx.designer.cs">
+      <DependentUpon>Frm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Comm.ascx.cs">
+      <DependentUpon>Comm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Comm.ascx.designer.cs">
+      <DependentUpon>Comm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm\DoneUncover.ascx.cs">
+      <DependentUpon>DoneUncover.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm\DoneUncover.ascx.designer.cs">
+      <DependentUpon>DoneUncover.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm\_doneUncover\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm\_doneUncover\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\AjaxDyna.ascx.cs">
+      <DependentUpon>AjaxDyna.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\AjaxDyna.ascx.designer.cs">
+      <DependentUpon>AjaxDyna.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\ajaxDyna\Dialog.ascx.cs">
+      <DependentUpon>Dialog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\ajaxDyna\Dialog.ascx.designer.cs">
+      <DependentUpon>Dialog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\ajaxDyna\DoneUncover.ascx.cs">
+      <DependentUpon>DoneUncover.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\ajaxDyna\DoneUncover.ascx.designer.cs">
+      <DependentUpon>DoneUncover.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\ajaxDyna\_dialog\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\ajaxDyna\_dialog\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\ajaxDyna\_doneUncover\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\ajaxDyna\_doneUncover\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\_ajaxDyna\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\comm_\_ajaxDyna\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\_comm\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\_comm\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\_fit\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\_fit\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\Birth.ascx.cs">
+      <DependentUpon>Birth.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="human\Birth.ascx.designer.cs">
+      <DependentUpon>Birth.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\Gender.ascx.cs">
+      <DependentUpon>Gender.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="human\Gender.ascx.designer.cs">
+      <DependentUpon>Gender.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\gender_\Required.ascx.cs">
+      <DependentUpon>Required.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="human\gender_\Required.ascx.designer.cs">
+      <DependentUpon>Required.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\Name.ascx.cs">
+      <DependentUpon>Name.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="human\Name.ascx.designer.cs">
+      <DependentUpon>Name.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_birth\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_birth\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_gender\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_gender\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\Family.ascx.cs">
+      <DependentUpon>Family.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="human\_name_\Family.ascx.designer.cs">
+      <DependentUpon>Family.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\family\Nulable.ascx.cs">
+      <DependentUpon>Nulable.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="human\_name_\family\Nulable.ascx.designer.cs">
+      <DependentUpon>Nulable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\family\_nulable\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\family\_nulable\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\Given.ascx.cs">
+      <DependentUpon>Given.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="human\_name_\Given.ascx.designer.cs">
+      <DependentUpon>Given.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\Mid.ascx.cs">
+      <DependentUpon>Mid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="human\_name_\Mid.ascx.designer.cs">
+      <DependentUpon>Mid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\_family\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\_family\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\_given\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\_given\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\_mid\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="human\_name_\_mid\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="menu_\JqUi.ascx.cs">
+      <DependentUpon>JqUi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu_\JqUi.ascx.designer.cs">
+      <DependentUpon>JqUi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Movable.ascx.cs">
+      <DependentUpon>Movable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Movable.ascx.designer.cs">
+      <DependentUpon>Movable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Closable.ascx.cs">
+      <DependentUpon>Closable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Closable.ascx.designer.cs">
+      <DependentUpon>Closable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog.ascx.cs">
+      <DependentUpon>Dialog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog.ascx.designer.cs">
+      <DependentUpon>Dialog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FetchUi.ascx.cs">
+      <DependentUpon>FetchUi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FetchUi.ascx.designer.cs">
+      <DependentUpon>FetchUi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="menu_\Cascade.ascx.cs">
+      <DependentUpon>Cascade.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu_\Cascade.ascx.designer.cs">
+      <DependentUpon>Cascade.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="menu_\_cascade\Css.ascx.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu_\_cascade\Css.ascx.designer.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="menu_\_cascade\css\TypeCss.aspx.cs">
+      <DependentUpon>TypeCss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu_\_cascade\css\TypeCss.aspx.designer.cs">
+      <DependentUpon>TypeCss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="movable_\DocumentMouseMove.ascx.cs">
+      <DependentUpon>DocumentMouseMove.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="movable_\DocumentMouseMove.ascx.designer.cs">
+      <DependentUpon>DocumentMouseMove.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\settings\Url.cs" />
+    <Compile Include="radio_\Horizon.ascx.cs">
+      <DependentUpon>Horizon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\Horizon.ascx.designer.cs">
+      <DependentUpon>Horizon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\horizon\_fit\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\horizon\_fit\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\Vertical.ascx.cs">
+      <DependentUpon>Vertical.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\Vertical.ascx.designer.cs">
+      <DependentUpon>Vertical.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\_horizon\Css.ascx.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="radio_\_horizon\Css.ascx.designer.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\_horizon\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\_horizon\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\_vertical\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\_vertical\Css.ascx.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="radio_\_vertical\Css.ascx.designer.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.ascx.cs">
+      <DependentUpon>Progress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.ascx.designer.cs">
+      <DependentUpon>Progress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="script_\NameInput.ascx.cs">
+      <DependentUpon>NameInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="script_\NameInput.ascx.designer.cs">
+      <DependentUpon>NameInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="script_\_nameInput\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="script_\_nameInput\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="State.ascx.cs">
+      <DependentUpon>State.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="State.ascx.designer.cs">
+      <DependentUpon>State.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Alter.ascx.cs">
+      <DependentUpon>Alter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Alter.ascx.designer.cs">
+      <DependentUpon>Alter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="alter_\Duo.ascx.cs">
+      <DependentUpon>Duo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="alter_\Duo.ascx.designer.cs">
+      <DependentUpon>Duo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="alter_\_duo\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="alter_\_duo\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirm1.ascx.cs">
+      <DependentUpon>Confirm1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirm1.ascx.designer.cs">
+      <DependentUpon>Confirm1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Alert2.ascx.cs">
+      <DependentUpon>Alert2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Alert2.ascx.designer.cs">
+      <DependentUpon>Alert2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Cover.ascx.cs">
+      <DependentUpon>Cover.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cover.ascx.designer.cs">
+      <DependentUpon>Cover.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailOptional.ascx.cs">
+      <DependentUpon>EmailOptional.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailOptional.ascx.designer.cs">
+      <DependentUpon>EmailOptional.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Email2.ascx.cs">
+      <DependentUpon>Email2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Email2.ascx.designer.cs">
+      <DependentUpon>Email2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailRequired2.ascx.cs">
+      <DependentUpon>EmailRequired2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailRequired2.ascx.designer.cs">
+      <DependentUpon>EmailRequired2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Err1.ascx.cs">
+      <DependentUpon>Err1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Err1.ascx.designer.cs">
+      <DependentUpon>Err1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FullName.ascx.cs">
+      <DependentUpon>FullName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FullName.ascx.designer.cs">
+      <DependentUpon>FullName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LabelEmailValidator2.ascx.cs">
+      <DependentUpon>LabelEmailValidator2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelEmailValidator2.ascx.designer.cs">
+      <DependentUpon>LabelEmailValidator2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelEmailRequiredValidator2.ascx.cs">
+      <DependentUpon>LabelEmailRequiredValidator2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelEmailRequiredValidator2.ascx.designer.cs">
+      <DependentUpon>LabelEmailRequiredValidator2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="menu_\Main.ascx.cs">
+      <DependentUpon>Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu_\Main.ascx.designer.cs">
+      <DependentUpon>Main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRegexed3.ascx.cs">
+      <DependentUpon>PasswordRegexed3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRegexed3.ascx.designer.cs">
+      <DependentUpon>PasswordRegexed3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRegexedErr2.ascx.cs">
+      <DependentUpon>PasswordRegexedErr2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRegexedErr2.ascx.designer.cs">
+      <DependentUpon>PasswordRegexedErr2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\duo_\InDiv.ascx.cs">
+      <DependentUpon>InDiv.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\duo_\InDiv.ascx.designer.cs">
+      <DependentUpon>InDiv.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\duo_\InRow.ascx.cs">
+      <DependentUpon>InRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\duo_\InRow.ascx.designer.cs">
+      <DependentUpon>InRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\duo_\_inDiv\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\duo_\_inDiv\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\duo_\_inRow\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\duo_\_inRow\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\Natural.ascx.cs">
+      <DependentUpon>Natural.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\Natural.ascx.designer.cs">
+      <DependentUpon>Natural.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\nat\Quo.ascx.cs">
+      <DependentUpon>Quo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="radioNullable_\nat\Quo.ascx.designer.cs">
+      <DependentUpon>Quo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\_natural\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radioNullable_\_natural\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\Duo.ascx.cs">
+      <DependentUpon>Duo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\Duo.ascx.designer.cs">
+      <DependentUpon>Duo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\_duo\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\_duo\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Regex_byBox.ascx.cs">
+      <DependentUpon>Regex_byBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Regex_byBox.ascx.designer.cs">
+      <DependentUpon>Regex_byBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Regex2.ascx.cs">
+      <DependentUpon>Regex2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Regex2.ascx.designer.cs">
+      <DependentUpon>Regex2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="state\Div.ascx.cs">
+      <DependentUpon>Div.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="state\Div.ascx.designer.cs">
+      <DependentUpon>Div.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="state\_div\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="state\_div\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tab.ascx.cs">
+      <DependentUpon>Tab.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tab.ascx.designer.cs">
+      <DependentUpon>Tab.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabsFoldable_\_duo_\Panes.ascx.cs">
+      <DependentUpon>Panes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabsFoldable_\_duo_\Panes.ascx.designer.cs">
+      <DependentUpon>Panes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabsFoldable_\_duo_\_panes\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabsFoldable_\_duo_\_panes\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\Horizon.ascx.cs">
+      <DependentUpon>Horizon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\Horizon.ascx.designer.cs">
+      <DependentUpon>Horizon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\horizon\_fit\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\horizon\_fit\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\Trio.ascx.cs">
+      <DependentUpon>Trio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\Trio.ascx.designer.cs">
+      <DependentUpon>Trio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\Duo.ascx.cs">
+      <DependentUpon>Duo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\Duo.ascx.designer.cs">
+      <DependentUpon>Duo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\vertical_\Flex.ascx.cs">
+      <DependentUpon>Flex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\vertical_\Flex.ascx.designer.cs">
+      <DependentUpon>Flex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\vertical_\Navi.ascx.cs">
+      <DependentUpon>Navi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\vertical_\Navi.ascx.designer.cs">
+      <DependentUpon>Navi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\vertical_\_flex\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\vertical_\_flex\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\vertical_\_navi\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\vertical_\_navi\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_horizon\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_horizon\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio_\Btns.ascx.cs">
+      <DependentUpon>Btns.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio_\Btns.ascx.designer.cs">
+      <DependentUpon>Btns.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio_\Panes.ascx.cs">
+      <DependentUpon>Panes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio_\Panes.ascx.designer.cs">
+      <DependentUpon>Panes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio_\_btns\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio_\_btns\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio_\_panes\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio_\_panes\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo_\Btns.ascx.cs">
+      <DependentUpon>Btns.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo_\Btns.ascx.designer.cs">
+      <DependentUpon>Btns.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo_\Panes.ascx.cs">
+      <DependentUpon>Panes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo_\Panes.ascx.designer.cs">
+      <DependentUpon>Panes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo_\_btns\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo_\_btns\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo_\_panes\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_duo_\_panes\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="tabs_\_trio\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="time\bound_\Day.ascx.cs">
+      <DependentUpon>Day.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="time\bound_\Day.ascx.designer.cs">
+      <DependentUpon>Day.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="time\bound_\day_\LeNow.ascx.cs">
+      <DependentUpon>LeNow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="time\bound_\day_\LeNow.ascx.designer.cs">
+      <DependentUpon>LeNow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="time\bound_\day_\_leNow\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="time\bound_\day_\_leNow\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="time\bound_\_day\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="time\bound_\_day\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TrOverlay.ascx.cs">
+      <DependentUpon>TrOverlay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrOverlay.ascx.designer.cs">
+      <DependentUpon>TrOverlay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Txt1.ascx.cs">
+      <DependentUpon>Txt1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Txt1.ascx.designer.cs">
+      <DependentUpon>Txt1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Txt.ascx.cs">
+      <DependentUpon>Txt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Txt.ascx.designer.cs">
+      <DependentUpon>Txt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Money.ascx.cs">
+      <DependentUpon>Money.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Money.ascx.designer.cs">
+      <DependentUpon>Money.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Txt4.ascx.cs">
+      <DependentUpon>Txt4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Txt4.ascx.designer.cs">
+      <DependentUpon>Txt4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Txt3.ascx.cs">
+      <DependentUpon>Txt3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Txt3.ascx.designer.cs">
+      <DependentUpon>Txt3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TxtArea1.ascx.cs">
+      <DependentUpon>TxtArea1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TxtArea1.ascx.designer.cs">
+      <DependentUpon>TxtArea1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txtArea\Probe.ascx.cs">
+      <DependentUpon>Probe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txtArea\Probe.ascx.designer.cs">
+      <DependentUpon>Probe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txtArea\_probe\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txtArea\_probe\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\Err.ascx.cs">
+      <DependentUpon>Err.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\Err.ascx.designer.cs">
+      <DependentUpon>Err.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\warn_\Phone.ascx.cs">
+      <DependentUpon>Phone.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\warn_\Phone.ascx.designer.cs">
+      <DependentUpon>Phone.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err\Email.ascx.cs">
+      <DependentUpon>Email.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err\Email.ascx.designer.cs">
+      <DependentUpon>Email.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err\email\Labeled.ascx.cs">
+      <DependentUpon>Labeled.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err\email\Labeled.ascx.designer.cs">
+      <DependentUpon>Labeled.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err\email\_labeled\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err\email\_labeled\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\warn_\_phone\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\warn_\_phone\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err\_email\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err\_email\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err_\Pass.ascx.cs">
+      <DependentUpon>Pass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="txt\err_\Pass.ascx.designer.cs">
+      <DependentUpon>Pass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err_\pass\Labeled.ascx.cs">
+      <DependentUpon>Labeled.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err_\pass\Labeled.ascx.designer.cs">
+      <DependentUpon>Labeled.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err_\pass\_labeled\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\err_\pass\_labeled\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\_err\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt\_err\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="txt_\Pass.ascx.cs">
+      <DependentUpon>Pass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="txt_\Pass.ascx.designer.cs">
+      <DependentUpon>Pass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="urlAssignable\_urlAssign\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="urlAssignable\_urlAssign\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\Js1.ascx.cs">
+      <DependentUpon>Js1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\Js1.ascx.designer.cs">
+      <DependentUpon>Js1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\errMsged\exnMsged\ui_\Click.ascx.cs">
+      <DependentUpon>Click.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\errMsged\exnMsged\ui_\Click.ascx.designer.cs">
+      <DependentUpon>Click.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\errMsged\exnMsged\ui_\_click\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\errMsged\exnMsged\ui_\_click\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Validator2.ascx.cs">
+      <DependentUpon>Validator2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validator2.ascx.designer.cs">
+      <DependentUpon>Validator2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Validator1.ascx.cs">
+      <DependentUpon>Validator1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validator1.ascx.designer.cs">
+      <DependentUpon>Validator1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForStationedPhoneNumber.ascx.cs">
+      <DependentUpon>LabelRegexValidatorForStationedPhoneNumber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForStationedPhoneNumber.ascx.designer.cs">
+      <DependentUpon>LabelRegexValidatorForStationedPhoneNumber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForMobileNumber.ascx.cs">
+      <DependentUpon>LabelRegexValidatorForMobileNumber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForMobileNumber.ascx.designer.cs">
+      <DependentUpon>LabelRegexValidatorForMobileNumber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForChinaIdNumber.ascx.cs">
+      <DependentUpon>LabelRegexValidatorForChinaIdNumber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForChinaIdNumber.ascx.designer.cs">
+      <DependentUpon>LabelRegexValidatorForChinaIdNumber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForPhoneNumber.ascx.cs">
+      <DependentUpon>LabelRegexValidatorForPhoneNumber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForPhoneNumber.ascx.designer.cs">
+      <DependentUpon>LabelRegexValidatorForPhoneNumber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelDecimalValidator.ascx.cs">
+      <DependentUpon>LabelDecimalValidator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelDecimalValidator.ascx.designer.cs">
+      <DependentUpon>LabelDecimalValidator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Decimal.ascx.cs">
+      <DependentUpon>Decimal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Decimal.ascx.designer.cs">
+      <DependentUpon>Decimal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelEmailRequiredValidator.ascx.cs">
+      <DependentUpon>LabelEmailRequiredValidator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelEmailRequiredValidator.ascx.designer.cs">
+      <DependentUpon>LabelEmailRequiredValidator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailRequired.ascx.cs">
+      <DependentUpon>EmailRequired.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailRequired.ascx.designer.cs">
+      <DependentUpon>EmailRequired.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelEmailValidator.ascx.cs">
+      <DependentUpon>LabelEmailValidator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelEmailValidator.ascx.designer.cs">
+      <DependentUpon>LabelEmailValidator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelPasswordRegexed.ascx.cs">
+      <DependentUpon>LabelPasswordRegexed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelPasswordRegexed.ascx.designer.cs">
+      <DependentUpon>LabelPasswordRegexed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelPasswordRegexedValidator.ascx.cs">
+      <DependentUpon>LabelPasswordRegexedValidator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelPasswordRegexedValidator.ascx.designer.cs">
+      <DependentUpon>LabelPasswordRegexedValidator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForEmail.ascx.cs">
+      <DependentUpon>LabelRegexValidatorForEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelRegexValidatorForEmail.ascx.designer.cs">
+      <DependentUpon>LabelRegexValidatorForEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelTextRegexedValidator.ascx.cs">
+      <DependentUpon>LabelTextRegexedValidator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelTextRegexedValidator.ascx.designer.cs">
+      <DependentUpon>LabelTextRegexedValidator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelRegexValidator.ascx.cs">
+      <DependentUpon>LabelRegexValidator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelRegexValidator.ascx.designer.cs">
+      <DependentUpon>LabelRegexValidator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelText.ascx.cs">
+      <DependentUpon>LabelText.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabelText.ascx.designer.cs">
+      <DependentUpon>LabelText.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRegexed.ascx.cs">
+      <DependentUpon>PasswordRegexed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordRegexed.ascx.designer.cs">
+      <DependentUpon>PasswordRegexed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Email.ascx.cs">
+      <DependentUpon>Email.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Email.ascx.designer.cs">
+      <DependentUpon>Email.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Regex.ascx.cs">
+      <DependentUpon>Regex.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Regex.ascx.designer.cs">
+      <DependentUpon>Regex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Password.ascx.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password.ascx.designer.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validator.ascx.cs">
+      <DependentUpon>Validator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validator.ascx.designer.cs">
+      <DependentUpon>Validator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_abort\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_abort\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_abort\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_abort\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\Upload.ascx.cs">
+      <DependentUpon>Upload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\Upload.ascx.designer.cs">
+      <DependentUpon>Upload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\ErrMsged.ascx.cs">
+      <DependentUpon>ErrMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\FailForked.ascx.cs">
+      <DependentUpon>FailForked.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\FailForked.ascx.designer.cs">
+      <DependentUpon>FailForked.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\ErrMsged.ascx.designer.cs">
+      <DependentUpon>ErrMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\errMsged\ExnMsged.ascx.cs">
+      <DependentUpon>ExnMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\errMsged\ExnMsged.ascx.designer.cs">
+      <DependentUpon>ExnMsged.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\errMsged\_exnMsged\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\errMsged\_exnMsged\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\_errMsged\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\failForked\_errMsged\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\_failForked\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\upload\_failForked\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\_upload\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax\_upload\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\ErrAlerted.ascx.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\ErrAlerted.ascx.designer.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\Btn2Go.ascx.cs">
+      <DependentUpon>Btn2Go.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\Btn2Go.ascx.designer.cs">
+      <DependentUpon>Btn2Go.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\DoneAlerted.ascx.cs">
+      <DependentUpon>DoneAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\DoneAlerted.ascx.designer.cs">
+      <DependentUpon>DoneAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\TrigPass.ascx.cs">
+      <DependentUpon>TrigPass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\TrigPass.ascx.designer.cs">
+      <DependentUpon>TrigPass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\TrigRole.ascx.cs">
+      <DependentUpon>TrigRole.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\TrigRole.ascx.designer.cs">
+      <DependentUpon>TrigRole.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\WithBtn.ascx.cs">
+      <DependentUpon>WithBtn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\WithBtn.ascx.designer.cs">
+      <DependentUpon>WithBtn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\WithSubmit.ascx.cs">
+      <DependentUpon>WithSubmit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\WithSubmit.ascx.designer.cs">
+      <DependentUpon>WithSubmit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_WithBtn\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_WithBtn\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_withSubmit\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\OtherExnAlerted.ascx.cs">
+      <DependentUpon>OtherExnAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\OtherExnAlerted.ascx.designer.cs">
+      <DependentUpon>OtherExnAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\otherExnAlerted\_withSubmit\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\_otherExnAlerted\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\trigRole\_otherExnAlerted\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\_trigRole\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\trigPass\_trigRole\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\_trigPass\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\doneAlerted\_trigPass\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\_doneAlerted\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\_btn2Go\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\_btn2Go\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\errAlerted\_doneAlerted\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\_errAlerted\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\failSeperated\_errAlerted\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\FailSeperated.ascx.cs">
+      <DependentUpon>FailSeperated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\FailSeperated.ascx.designer.cs">
+      <DependentUpon>FailSeperated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\ErrSeperated.ascx.cs">
+      <DependentUpon>ErrSeperated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\ErrSeperated.ascx.designer.cs">
+      <DependentUpon>ErrSeperated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\State.ascx.cs">
+      <DependentUpon>State.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\State.ascx.designer.cs">
+      <DependentUpon>State.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\abort\failHandled\_errHandled\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\abort\failHandled\_errHandled\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\abort\_failHandled\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\abort\_failHandled\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\AlwaysAlerted.ascx.cs">
+      <DependentUpon>AlwaysAlerted.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\AlwaysAlerted.ascx.designer.cs">
+      <DependentUpon>AlwaysAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\errSeperated\ErrAlerted.ascx.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\errSeperated\ErrAlerted.ascx.designer.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\ErrAlerted.ascx.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\ErrAlerted.ascx.designer.cs">
+      <DependentUpon>ErrAlerted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\errAlerted\WithButton.ascx.cs">
+      <DependentUpon>WithButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\errAlerted\WithButton.ascx.designer.cs">
+      <DependentUpon>WithButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\errAlerted\_withButton\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\errAlerted\_withButton\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\errAlerted\_withButton\js\AsSrc.aspx.cs">
+      <DependentUpon>AsSrc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\errAlerted\_withButton\js\AsSrc.aspx.designer.cs">
+      <DependentUpon>AsSrc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\WithButton.ascx.cs">
+      <DependentUpon>WithButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\WithButton.ascx.designer.cs">
+      <DependentUpon>WithButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\_abort\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\_abort\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\_alwaysAlerted\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\_alwaysAlerted\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\_alwaysAlerted\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\_alwaysAlerted\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\_errAlerted\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\_errAlerted\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\_errAlerted\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\_errAlerted\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\errSeperated\errAlerted\Btn2Go.ascx.cs">
+      <DependentUpon>Btn2Go.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\errSeperated\errAlerted\Btn2Go.ascx.designer.cs">
+      <DependentUpon>Btn2Go.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\errSeperated\errAlerted\_btn2Go\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\errSeperated\errAlerted\_btn2Go\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\errSeperated\_errAlerted\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\errSeperated\_errAlerted\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\_failSeperated\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\_errSeperated\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\_errSeperated\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state_\_failSeperated\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\_state\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\_state\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\_state\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\_state\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_closable\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_closable\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_Default.ascx.cs">
+      <DependentUpon>_Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Default.ascx.designer.cs">
+      <DependentUpon>_Default.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_dialog\Css.ascx.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_dialog\Css.ascx.designer.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_dialog\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_alter\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_alter\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_dialog\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_dialog_\TopBar.ascx.cs">
+      <DependentUpon>TopBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_dialog_\TopBar.ascx.designer.cs">
+      <DependentUpon>TopBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_dialog_\_topBar\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_dialog_\_topBar\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_feed\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_feed\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_fetchUi\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_fetchUi\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="radio_\_vertical\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_frm\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_frm\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_progress\Css.ascx.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_progress\Css.ascx.designer.cs">
+      <DependentUpon>Css.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_progress\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_progress\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_state\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_state\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_alert\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_alert\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_alert\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_alert\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_all\Scripts.ascx.cs">
+      <DependentUpon>Scripts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_all\Scripts.ascx.designer.cs">
+      <DependentUpon>Scripts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\Abort.ascx.cs">
+      <DependentUpon>Abort.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\Abort.ascx.designer.cs">
+      <DependentUpon>Abort.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\abort\FailHandled.ascx.cs">
+      <DependentUpon>FailHandled.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\abort\FailHandled.ascx.designer.cs">
+      <DependentUpon>FailHandled.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_ajax_\state\abort\failHandled\ErrHandled.ascx.cs">
+      <DependentUpon>ErrHandled.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_ajax_\state\abort\failHandled\ErrHandled.ascx.designer.cs">
+      <DependentUpon>ErrHandled.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_confirm\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_confirm\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_confirm\Script.ascx.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_confirm\Script.ascx.designer.cs">
+      <DependentUpon>Script.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_err1\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_err1\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_js\Err.ascx.cs">
+      <DependentUpon>Err.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_js\Err.ascx.designer.cs">
+      <DependentUpon>Err.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_passwordRegexed\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_passwordRegexed\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_passwordRegexedErr2\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_passwordRegexedErr2\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_radio_\Duo.ascx.cs">
+      <DependentUpon>Duo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_radio_\Duo.ascx.designer.cs">
+      <DependentUpon>Duo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_radio_\_duo\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_radio_\_duo\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_money\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_money\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_txtArea\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_txtArea\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_txt\Js4Txt4.ascx.cs">
+      <DependentUpon>Js4Txt4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_txt\Js4Txt4.ascx.designer.cs">
+      <DependentUpon>Js4Txt4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_txt\Js.ascx.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_txt\Js.ascx.designer.cs">
+      <DependentUpon>Js.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ajax\_jsonBack\NewFolder1\" />
+    <Folder Include="ajax_\trigErrDonePassRoleOtheExn\" />
+    <Folder Include="btn_\" />
+    <Folder Include="menu\" />
+    <Folder Include="menu_\cascade\" />
+    <Folder Include="page_\loader_\" />
+    <Folder Include="radioNullable_\_duo\" />
+    <Folder Include="txt\validated_\" />
+    <Folder Include="txt_\pass\" />
+    <Folder Include="_ajax_\failSeperated_\" />
+    <Folder Include="_ajax_\state\_withButton\" />
+    <Folder Include="_all\asSrc\" />
+    <Folder Include="_all\scripts_\" />
+    <Folder Include="_all\script\" />
+    <Folder Include="_all\styleScriptS\" />
+    <Folder Include="_all\_scripts_\" />
+    <Folder Include="_alter_\" />
+    <Folder Include="_aspx\_test\" />
+    <Folder Include="_frm_\_feed_\" />
+    <Folder Include="_frm_\_input\" />
+    <Folder Include="_layout_\jq\stack_\" />
+    <Folder Include="_layout_\jq\_stack_\" />
+    <Folder Include="_me\jq\" />
+    <Folder Include="_none\" />
+    <Folder Include="_previous\" />
+    <Folder Include="_remoting\" />
+    <Folder Include="_tabsFoldable_\" />
+    <Folder Include="_tabs_\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_test\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_master\TypeJs.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_master\Css.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_master\Html.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'hbue__deptS_ccpOrg|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'hbue__deptS_ccpOrg___release|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'test_release|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PreferChinese|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_PreferChinese|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hbue40|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbols4Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbol|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12363</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12345/app_/nilnul.web._ctr_</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+			rem	"$(MSBuildBinPath)\msbuild.exe" "$(ProjectDir)test.csproj" /p:DeployOnBuild=true /p:Configuration=Debug /p:Platform=AnyCPU /p:PublishProfile=Pub
+
+			rem "$(MSBuildBinPath)\MSBuild.exe" -allowUntrusted /p:DeployOnBuild=true /p:PublishProfile=winhost
+	 rem "$(MSDeployBinPath)\MSdeploy.exe" -allowUntrusted  /p:PublishProfile=winhost
+
+
+			rem "c:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild" -allowUntrusted /p:DeployOnBuild=true /p:PublishProfile=winhost
+
+		</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!---->
+  <!--If you only build in Visual Studio, then putting something like this into your csproj file (at the end) will work:-->
+  <!--<Target Name="Deploy" AfterTargets="Build">
+    <MSBuild Projects="$(ProjectPath)" Targets="WebPublish" Properties="PublishProfile=winhost;allowUntrusted"   />
+  </Target>-->
+  <!--However, if you build with with MSBuild this will result in a circular dependency. I have not yet figured out a solution that will allow you to publish on build that works in both Visual Studio and MSBuild.-->
+  <!---->
+  <!---->
+  <!--Publish WebDeploy Automatically with VS Build
+March 24, 2017 / MSDeploy / 7 Comments 
+In general, its pretty easy to extend the MSBuild process in ASP.NET projects using the [ProjectName].wpp.targets file.  I recently attempted to answer a StackOverflow question asking how to automatically deploy on every Visual Studio build using this technique.  My first overly-confident answer was to add the same MSBuild properties that would be used from the command line in the .csproj or .wpp.target file:
+  <PropertyGroup>
+    <DeployOnBuild>true</DeployOnBuild>
+    <PublishProfile>Local</PublishProfile>
+  </PropertyGroup>
+I didn’t even try this out before answering because I was sure this would work.  Alas no, it didn’t work so I spent the next few days researching this further.
+The DeployOnBuild property specifically was ignored when set statically in  the project file.  Apparently it is a special property that must be set globally on the commandline.   
+As an alternative, I found that I could call MSBuild again passing the property and it worked.-->
+  <!--<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AutoDeployOnVSBuild>true</AutoDeployOnVSBuild>
+    <AutoDeployPublishProfileName>LocalFile</AutoDeployPublishProfileName>
+  </PropertyGroup>
+  <Target Name="AfterBuild">    
+    <MSBuild 
+      Condition="'$(AutoDeployOnVSBuild)'=='true' AND '$(DeployOnBuild)'!='true'" 
+      Projects="$(MSBuildProjectFullPath)" 
+      Properties="DeployOnBuild=true;PublishProfile=$(AutoDeployPublishProfileName);BuildingInsideVisualStudio=False"/>
+  </Target>
+</Project>-->
+  <!--view raw
+AutoDeployOnVSBuild.targets hosted with  by GitHub 
+
+You’ll notice I created some new properties to make it a bit easier to understand.  The MSBuild call references the same project so I also placed a Condition on the call to avoid a circular reference.  You can also customize which publish profile is deployed by updating the AutoDeployPublishProfileName MSBuild property.
+Source
+The working source for this solution is on Github at https://github.com/rschiefer/AutoDeployFromVSBuild
+Please leave a comment below if this blog post was helpful or you have additional questions.  Happy deployments!-->
+  <!--Building on the above  @chief7's answer, I was able to get this working in an MVC project in Visual Studio 2015 like so:-->
+  <!--<Target Name="Deploy" AfterTargets="Build">
+		<MSBuild
+        Condition="'$(DeployOnBuild)'!='true'"
+        Projects="$(ProjectPath)"
+        Targets="WebPublish"
+        Properties="PublishProfile=$(AutoDeployPublishProfileName)"/>
+	</Target>-->
+  <!--The original answer was throwing MSB4006 for me:
+	There is a circular dependency in the target dependency graph involving target "AfterBuild"
+	This answer suggested changing the target name and adding the AfterTargets property as shown above, which worked.
+	As an aside for those who need to make deployment contingent on configuration (Debug, Release, etc.)—@chief7 has a great write-up on their website.-->
+</Project>

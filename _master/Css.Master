@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  %>
+
+<script runat="server">
+
+	protected void Page_Load(object sender, EventArgs e)
+	{
+		Response.ContentType = nilnul.web.mime.Mime.Instances.TextCss;
+
+		// HttpCacheability.Server means that the page will only be created once 
+		// on the server. Private means that the client is also allowed to cache.
+		// Response.Cache.SetCacheability(HttpCacheability.Public);
+
+		//// Set the cache expiration date as never, basically. In computers,
+		// // one month is essentially never.
+		// // Use the DateTime class for our expiration.
+		// Response.Cache.SetExpires(DateTime.Now.AddMonths(1));
+
+
+		// // Indicate that the client's cache is valid until the item expires.
+		// Response.Cache.SetValidUntilExpires(true);
+
+	}
+
+</script>
+
+<asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+</asp:contentplaceholder>
+
